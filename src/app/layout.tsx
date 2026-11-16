@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { Geist, Instrument_Serif } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/content/site";
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div
             id="content"
             className="content-stage"
-            style={{ "--content-pattern": `url("${contentPattern}")` }}
+            style={{ "--content-pattern": `url("${contentPattern}")` } as CSSProperties}
           >
             {children}
           </div>
