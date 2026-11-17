@@ -108,6 +108,15 @@ export const site: Site = {
        image: "/projects/RuffCity.jpg",
        imageAlt: "Ruff City",
      },
+          {
+       title: "Code Crafters",
+       year: "",
+       summary: ["Building various things in C for Code Crafters Challenges"],
+       tags: ["C", "Systems Programming"],
+       href: "https://github.com/FruitPunch5amurai",
+       image: "/projects/Codecrafters.jpg",
+       imageAlt: "Code Crafters",
+     },
   ],
   skills: [
     {

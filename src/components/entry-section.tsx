@@ -51,7 +51,9 @@ function EntryRow({ entry, index }: { entry: Project; index: number }) {
       <img
         src={publicSrc(image)}
         alt={entry.imageAlt?.trim() || entry.title}
-        className="h-auto w-full border border-line"
+className={`h-auto border border-line ${
+  entry.title === "Code Crafters" ? "w-2/4" : "w-full"
+}`}
       />
       <div className={textClassName}>{body}</div>
     </>
