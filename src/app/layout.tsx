@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { Geist, Instrument_Serif } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/content/site";
@@ -17,6 +18,11 @@ const display = Instrument_Serif({
 });
 
 const contentPattern = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/projects/DoggoFaces.png`;
+const contentPatternStyle: CSSProperties & {
+  "--content-pattern": string;
+} = {
+  "--content-pattern": `url("${contentPattern}")`,
+};
 
 
 export const metadata: Metadata = {
@@ -42,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div
             id="content"
             className="content-stage"
-            style={{ "--content-pattern": `url("${contentPattern}")` }}
+            style={contentPatternStyle}
           >
             {children}
           </div>
