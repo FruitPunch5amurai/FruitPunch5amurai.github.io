@@ -51,7 +51,7 @@ export const site: Site = {
   summary:
     "I build the systems a player feels, and the tools a team needs.",
   about: [
-    "Enthusiastic Gameplay Engineer with 8+ years of professional experience in software development and 5+ shipping mobile, PC, and web games.",
+    "Enthusiastic Fullstack Engineer with 8+ years of professional experience in software development and 5+ shipping mobile, PC, and web games.",
     "Able to work as Fullstack Engineer using suite of tools such as Typescript, Node.js, and Amazon Web Services.",
     "Strong C++ foundations with hands-on experience in Unity and custom engine development.",
     "Focused on optimization and performance to drive smooth user experiences and development.",
