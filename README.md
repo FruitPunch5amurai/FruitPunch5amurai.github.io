@@ -30,26 +30,12 @@ Then open [http://127.0.0.1:4173](http://127.0.0.1:4173).
 
 GitHub Pages on the free plan is available for public repositories. Private repositories need a plan that includes Pages.
 
-This folder currently sits inside the git repository at your home directory. Publish it as its own repository so it does not get committed there.
+This repository is already named `FruitPunch5amurai.github.io`, so GitHub serves it as a user site at the domain root.
 
-1. Create a new repository on GitHub. The default branch should be `main`.
-2. From this folder, connect it and push:
-
-```bash
-git init
-git add .
-git commit -m "Add static Next.js portfolio"
-git branch -M main
-git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
-```
-
-3. In the repository, open **Settings → Pages → Build and deployment**.
-4. Set **Source** to **GitHub Actions**.
-
-The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds the site and deploys `out/` on every push to `main`. The first run needs the Pages source set to GitHub Actions, or the deploy job will fail.
-
-A user site repository named `YOUR_USERNAME.github.io` is served at the root. A project repository is served at `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/` until a custom domain is attached. This project assumes the site is served from `/`, which is what you want once your domain points at GitHub Pages. If you need the project URL to work before DNS is ready, set `NEXT_PUBLIC_BASE_PATH` to `/YOUR_REPOSITORY` in the workflow's build step and rebuild.
+1. In the repository, open **Settings → Pages → Build and deployment**.
+2. Set **Source** to **GitHub Actions**.
+3. Push your changes to `main`. The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds the static site into `out/` and deploys it.
+4. Check the **Actions** tab for a successful “Deploy to GitHub Pages” run. The site will then be available at `https://FruitPunch5amurai.github.io/`.
 
 ## Use your own domain
 
