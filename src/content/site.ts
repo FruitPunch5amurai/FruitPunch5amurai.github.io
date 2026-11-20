@@ -117,6 +117,15 @@ export const site: Site = {
        image: "/projects/Codecrafters.jpg",
        imageAlt: "Code Crafters",
      },
+     {
+       title: "Ludus Engine",
+       year: "",
+       summary: [" Work in progress custom game engine written in C++"],
+       tags: ["Game Engine Development", "C++"],
+       href: "https://github.com/FruitPunch5amurai/GreyboxEngine",
+       image: "/projects/GameControllerIcon.png",
+       imageAlt: "Ruff City",
+     },     
   ],
   skills: [
     {
